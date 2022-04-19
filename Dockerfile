@@ -2,7 +2,7 @@
 # build
 FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
 WORKDIR /source
-COPY ./A.Kovalyov-Zadanie1-TC .
+COPY . .
 RUN dotnet restore "./A.Kovalyov-Zadanie1-TC/A.Kovalyov-Zadanie1-TC.csproj"
 RUN dotnet publish "./A.Kovalyov-Zadanie1-TC/A.Kovalyov-Zadanie1-TC.csproj" -c release -o /app --no-restore
 
